@@ -54,12 +54,12 @@
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | MUTE |VOLDN|VOLUP| PREV| NEXT| PLAY|   |     |  1  |  2  |  3  |     | BTCLR|
+// | MUTE |VOLDN|VOLUP| PREV| NEXT| PLAY|   |     |  1  |  2  |  3  |     |      |
 // |      |     |     |     | BRID| BRIU|   |     |  4  |  5  |  6  |     |      |
 // | CAPS | BT1 | BT2 | BT3 | BT4 | BT5 |   |     |  7  |  8  |  9  |     |  ENT |
 //                    |     |     |     |   |     |     |  0  |
                         bindings = <
-   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT &kp C_PP   &trans &kp N1 &kp N2 &kp N3 &trans &bt BT_CLR
+   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT &kp C_PP   &trans &kp N1 &kp N2 &kp N3 &trans &trans
    &trans &trans  &trans &trans   &kp C_BRI_DN  &kp C_BRI_UP                 &trans &kp N4 &kp N5 &kp N6 &trans &trans
    &kp CAPS &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &kp N7 &kp N8 &kp N9 &trans &trans
                                         &trans &trans &trans                 &trans &trans &kp N0
