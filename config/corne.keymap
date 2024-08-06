@@ -37,15 +37,15 @@
                 nav_layer {
 // Nav Layer:
 // --------------------------------------------------------------------------------------------------
-// |  ESC | LCLK| MUP | RCLK | MCLK|     |               |PR_TAB|     | UP  |     |     | BKSP |
-// |      |MLEFT|MDOWN|MRIGHT| SRUP|     |               |NE_TAB| LFT | DWN | RGT |     |      |
-// | SHFT |SRLFT|     |SRRGT |SRDWN|     |               |      |     |     |     |     |  ENT |
+// |  ESC |     | LCLK| MUP | RCLK | MCLK|               |PR_TAB|     | UP   |      |     | BKSP |
+// |      |     |MLEFT|MDOWN|MRIGHT| SRUP|               |NE_TAB| LFT | DWN  | RGT  |     |      |
+// | SHFT |     |SRLFT|     |SRRGT |SRDWN|               | BACK | FWD |PR_SPC|NE_SPC|     |  ENT |
 //                    |  ALT | ADJ | GUI |               | SPC  |     | GUI |
 
                         bindings = <
-   &kp ESC    &mkp LCLK  U_MS_U   &mkp RCLK   &mkp MCLK  &none       &kp LC(LS(TAB))  &none    &kp UP   &none     &none   &kp BSPC
-   &trans     U_MS_L     U_MS_D   U_MS_R      U_WH_U     &none       &kp LC(TAB)      &kp LEFT &kp DOWN &kp RIGHT &none   &trans
-   &kp LSHFT  U_WH_L     &none    U_WH_R      U_WH_D     &none       &none            &none    &none    &none     &none   &kp RET
+   &kp ESC    &none  &mkp LCLK  U_MS_U   &mkp RCLK   &mkp MCLK       &kp LC(LS(TAB))  &none         &kp UP    &none      &none   &kp BSPC
+   &trans     &none  U_MS_L     U_MS_D   U_MS_R      U_WH_U          &kp LC(TAB)      &kp LEFT      &kp DOWN  &kp RIGHT  &none   &trans
+   &kp LSHFT  &none  U_WH_L     &none    U_WH_R      U_WH_D          &kp LG(LBKT)     &kp LG(RBKT)  &LC(LEFT) &LC(RIGHT) &none   &kp RET
                             &kp LALT   &mo ADJ   &kp LGUI            &kp SPACE   &trans   &kp RGUI
                         >;
                 };
