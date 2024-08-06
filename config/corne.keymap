@@ -43,9 +43,9 @@
 //                    |  ALT | ADJ | GUI |               | SPC  |     | GUI |
 
                         bindings = <
-   &kp ESC    &none  &mkp LCLK  U_MS_U   &mkp RCLK   &mkp MCLK       &kp LC(LS(TAB))  &none         &kp UP    &none      &none   &kp BSPC
-   &trans     &none  U_MS_L     U_MS_D   U_MS_R      U_WH_U          &kp LC(TAB)      &kp LEFT      &kp DOWN  &kp RIGHT  &none   &trans
-   &kp LSHFT  &none  U_WH_L     &none    U_WH_R      U_WH_D          &kp LG(LBKT)     &kp LG(RBKT)  &LC(LEFT) &LC(RIGHT) &none   &kp RET
+   &kp ESC    &none  &mkp LCLK  U_MS_U   &mkp RCLK   &mkp MCLK       &kp LC(LS(TAB))  &none         &kp UP       &none         &none   &kp BSPC
+   &trans     &none  U_MS_L     U_MS_D   U_MS_R      U_WH_U          &kp LC(TAB)      &kp LEFT      &kp DOWN     &kp RIGHT     &none   &trans
+   &kp LSHFT  &none  U_WH_L     &none    U_WH_R      U_WH_D          &kp LG(LBKT)     &kp LG(RBKT)  &kp LC(LEFT) &kp LC(RIGHT) &none   &kp RET
                             &kp LALT   &mo ADJ   &kp LGUI            &kp SPACE   &trans   &kp RGUI
                         >;
                 };
