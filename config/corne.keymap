@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "mouse.dtsi"
-#include "layer_status.h"
 
 // For notification
 {
