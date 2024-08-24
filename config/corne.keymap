@@ -11,7 +11,7 @@
 #include "mouse.dtsi"
 
 // For notification
-{
+/{
     behaviors {
         to_layer: to_layer {
             compatible = "zmk,behavior-to-layer";
@@ -24,7 +24,7 @@
             bindings = <&mo>, <&layer_status_update>;
         };
     };
-}
+};
 
 // Layers
 #define DEF 0
