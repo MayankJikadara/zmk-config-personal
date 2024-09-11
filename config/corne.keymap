@@ -17,6 +17,31 @@
 #define ADJ 3
 
 / {
+        macros {
+            ZMK_MACRO(to_def,
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp F17 &to DEF>;
+            )
+
+            ZMK_MACRO(to_nav,
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp F18 &to NAV>;
+            )
+
+            ZMK_MACRO(to_sym,
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp F19 &to SYM>;
+            )
+
+            ZMK_MACRO(to_adj,
+                wait-ms = <30>;
+                tap-ms = <40>;
+                bindings = <&kp F20 &to ADJ>;
+            )
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -32,7 +57,7 @@
    &kp ESC       &kp Q &kp W &kp E &kp R &kp T      &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LCTRL TAB &kp A &kp S &kp D &kp F &kp G      &kp H  &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
    &kp LSHFT     &kp Z &kp X &kp C &kp V &kp B      &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
-                       &kp LALT &to SYM &kp LGUI    &kp SPACE &to NAV &kp RGUI
+                       &kp LALT &to_sym &kp LGUI    &kp SPACE &to_nav &kp RGUI
                         >;
                 };
                 nav_layer {
@@ -47,7 +72,7 @@
    &kp ESC    &none  &mkp LCLK  U_MS_U   &mkp RCLK   &mkp MCLK       &kp LC(LS(TAB))  &none                  &kp UP       &none                 &none   &kp BSPC
    &trans     &none  U_MS_L     U_MS_D   U_MS_R      U_WH_U          &kp LC(TAB)      &mt LA(LEFT) LEFT      &kp DOWN     &mt LA(RIGHT) RIGHT   &none   &trans
    &kp LSHFT  &none  U_WH_L     &none    U_WH_R      U_WH_D          &kp LG(LBKT)     &kp LG(RBKT)           &kp LC(LEFT) &kp LC(RIGHT)         &none   &kp RET
-                            &kp LALT   &to DEF   &kp LGUI            &kp SPACE   &to ADJ   &kp RGUI
+                            &kp LALT   &to_def   &kp LGUI            &kp SPACE   &to_adj   &kp RGUI
                         >;
                 };
 
@@ -63,7 +88,7 @@
    &kp  ESC   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &trans     &kp F1   &kp F2 &kp F3   &kp F4   &kp F5      &kp MINUS &kp EQUAL &kp LBRC        &kp RBRC &kp PIPE &kp GRAVE
    &kp LSHIFT &kp F6   &kp F7 &kp F8   &kp F9   &kp F10     &kp UNDER &kp PLUS  &kp LBKT        &kp RBKT &kp BSLH &kp TILDE
-                    	   &kp LALT  &to DEF &kp LGUI      &kp SPACE  &to NAV  &kp RGUI
+                    	   &kp LALT  &to_def &kp LGUI      &kp SPACE  &to_nav  &kp RGUI
                         >;
                 };
 
@@ -78,7 +103,7 @@
    &kp ESC     &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV   &kp C_NEXT   &kp C_PP          &none  &kp N1 &kp N2 &kp N3 &kp LG(LS(N4))    &trans
    &trans      &kp C_MUTE   &none        &none        &kp C_BRI_DN &kp C_BRI_UP      &none  &kp N4 &kp N5 &kp N6 &kp LG(LC(SPACE)) &trans
    &kp CAPS    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &none  &kp N7 &kp N8 &kp N9 &kp LA(LC(C))     &trans
-                                        &trans &to DEF &trans                       &trans &to NAV &kp N0
+                                        &trans &to_def &trans                       &trans &to_nav &kp N0
                         >;
                 };
         };
